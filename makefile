@@ -11,7 +11,7 @@ DOCDIR	= doc
 HTMLDIR	= html
 
 RENDER	= asciidoc
-OPTIONS	= -b html5 -ns -a toc -a asciimath
+OPTIONS	= -b html5 -ns -a toc -a asciimath -a source-highlighter=highlight
 
 SRCS	= $(shell find $(HTMLDIR) -name '*.adoc')
 OBJS	= $(SRCS:.adoc=.html)
