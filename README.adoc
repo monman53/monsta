@@ -1,0 +1,6 @@
+monsta
+======
+
+MONman Super poor sTAtic site genertor.
+
+個人用です．
