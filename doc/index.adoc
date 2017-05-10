@@ -1,9 +1,0 @@
-Top
-===
-
-いい加減これで安定させたい．
-
-== Site Map
-
-* link:/[Top]
-** link:/profile/[Profile]
