@@ -1,4 +1,4 @@
-/html/*
-/doc/*
-/tmp/*
-/bin/*
+html/*
+doc/*
+bin/*
+!.gitkeep
