@@ -6,9 +6,11 @@
 
 PWD		= $(shell pwd)
 
+SRCDIR	= src
 BINDIR	= bin
 DOCDIR	= doc
 HTMLDIR	= html
+PUBDIR	= public
 
 RENDER	= asciidoc
 OPTIONS	= -b html5 -ns -a toc -a asciimath -a source-highlighter=highlight
@@ -24,6 +26,7 @@ build: clean script copy htmls
 
 copy:
 	@rsync -arEt $(DOCDIR)/ $(HTMLDIR)
+	@rsync -arEt $(PUBDIR)/ $(HTMLDIR)
 
 script: src/template.sh
 	@ln -s ../src/template.sh $(BINDIR)
