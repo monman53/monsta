@@ -20,9 +20,11 @@ OBJS	= $(SRCS:.adoc=.html)
 TARGET	= htmls
 
 
-all: copy $(OBJS)
+default: copy htmls
 
-build: clean script copy htmls
+all: clean script default
+
+htmls: $(OBJS)
 
 copy:
 	@rsync -arEt $(DOCDIR)/ $(HTMLDIR)
