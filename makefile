@@ -28,12 +28,12 @@ copy:
 	@rsync -arEt $(DOCDIR)/ $(HTMLDIR)
 	@rsync -arEt $(PUBDIR)/ $(HTMLDIR)
 
-script: src/template.sh
-	@ln -s ../src/template.sh $(BINDIR)
+script: src/template.pl
+	@ln -s ../src/template.pl $(BINDIR)/template
 
 %.html: %.adoc
 	@$(RENDER) $(OPTIONS) $<
-	@$(BINDIR)/template.sh $< $@ > $@.tmp
+	@$(BINDIR)/template $< $@ > $@.tmp
 	@mv $@.tmp $@
 	@echo convert $<
 	

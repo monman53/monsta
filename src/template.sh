@@ -10,8 +10,8 @@ echo "<meta charset='utf-8'>"
 echo "<link rel='stylesheet' href='/css/main.css'>"
 
 # scripts
-echo "<script src='/js/asciidoc.js'></script>"
-echo "<script src='/js/toc.js'></script>"
+# echo "<script src='/js/asciidoc.js'></script>"
+# echo "<script src='/js/toc.js'></script>"
 
 # title
 title=$(head -n 1 $1)
