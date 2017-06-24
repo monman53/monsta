@@ -1,5 +1,6 @@
-public/*
-doc/*
-html/*
-bin/*
+/*
+!/.gitignore
+!/makefile
+!/README.adoc
+!/src/*
 !.gitkeep
