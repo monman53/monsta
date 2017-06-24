@@ -2,5 +2,6 @@
 !/.gitignore
 !/makefile
 !/README.adoc
+!/LICENSE
 !/src/*
 !.gitkeep
