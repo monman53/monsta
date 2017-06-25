@@ -2,7 +2,7 @@
 # monman static site generator 
 #--------------------------------
 
-.PHONY:	script htmls
+.PHONY:	htmls
 
 OPTIONS	= -b html5 -s -a toc -a asciimath -a source-highlighter=highlight
 
@@ -10,10 +10,10 @@ SRCS	= $(shell find root -name '*.adoc')
 OBJS	= $(SRCS:.adoc=.html)
 
 
-all: script htmls 
+all: template htmls 
 
-script: src/template.pl
-	@ln -fs ./src/template.pl ./template
+template: src/template.pl
+	cp ./src/template.pl ./template
 
 htmls: $(OBJS)
 
@@ -25,3 +25,4 @@ htmls: $(OBJS)
 
 clean:
 	find ./root -name "*.html" -delete
+	rm -f template
