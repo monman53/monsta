@@ -3,5 +3,5 @@
 !/makefile
 !/README.adoc
 !/LICENSE
-!/src/*
+!/src
 !.gitkeep

@@ -9,15 +9,23 @@ OPTIONS	= -b html5 -s -a toc -a asciimath -a source-highlighter=highlight
 SRCS	= $(shell find root -name '*.adoc')
 OBJS	= $(SRCS:.adoc=.html)
 
+VPATH	= src
 
-all: template htmls 
 
-template: src/template.sh
-	cp ./src/template.sh ./template
+shs		= template rmhtml
+
+all: $(shs) htmls 
+
+$(shs): %: %.sh
+	cp $< $@
+
+#
+# template: src/template.sh
+# 	cp ./src/template.sh ./template
 
 htmls: $(OBJS)
 
-%.html: %.adoc src/template.sh
+%.html: %.adoc template
 	@asciidoc $(OPTIONS) $<
 	@./template $< $@ > $@.tmp
 	@mv $@.tmp $@
@@ -25,4 +33,4 @@ htmls: $(OBJS)
 
 clean:
 	find ./root -name "*.html" -delete
-	rm -f template
+	rm -f $(shs)
