@@ -12,12 +12,12 @@ OBJS	= $(SRCS:.adoc=.html)
 
 all: template htmls 
 
-template: src/template.pl
-	cp ./src/template.pl ./template
+template: src/template.sh
+	cp ./src/template.sh ./template
 
 htmls: $(OBJS)
 
-%.html: %.adoc src/template.pl
+%.html: %.adoc src/template.sh
 	@asciidoc $(OPTIONS) $<
 	@./template $< $@ > $@.tmp
 	@mv $@.tmp $@
