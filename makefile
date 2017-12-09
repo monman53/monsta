@@ -4,32 +4,28 @@
 
 .PHONY:	htmls
 
-OPTIONS	= -b html5 -s -a toc -a asciimath -a source-highlighter=highlight
-
 SRCS	= $(shell find root -name '*.adoc')
 OBJS	= $(SRCS:.adoc=.html)
 
 VPATH	= src
 
 
-shs		= template rmhtml
+shs		= rmhtml
 
-all: $(shs) htmls 
+rbs		= convert
+
+all: $(shs) $(rbs) htmls 
 
 $(shs): %: %.sh
 	cp $< $@
 
-#
-# template: src/template.sh
-# 	cp ./src/template.sh ./template
+$(rbs): %: %.rb
+	cp $< $@
 
 htmls: $(OBJS)
 
-%.html: %.adoc template
-	@asciidoc $(OPTIONS) $<
-	@./template $< $@ > $@.tmp
-	@mv $@.tmp $@
-	@echo convert $<
+%.html: %.adoc ./convert
+	ruby ./convert $< > $(basename $<).html
 
 clean:
 	find ./root -name "*.html" -delete
