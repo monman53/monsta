@@ -22,14 +22,15 @@ puts "<link rel='stylesheet' href='/css/main.css'>"
 puts "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css'>"
 puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js'></script>"
 puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js'></script>"
+puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js'></script>"
 puts "<script>hljs.initHighlightingOnLoad();</script>"
 # MathJax
 puts "<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>"
 
 # title
-puts "<h1>#{document.doctitle}</h1>"
 puts "<p><a href='/'>monman53.github.io</a></p>"
 puts "<hr>"
+puts "<h1>#{document.doctitle}</h1>"
 
 
 
