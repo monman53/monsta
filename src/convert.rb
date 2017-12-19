@@ -32,6 +32,11 @@ puts "<p><a href='/'>monman53.github.io</a></p>"
 puts "<hr>"
 puts "<h1>#{document.doctitle}</h1>"
 
+# Google Analytics
+File.open("google_analytics", "r") do |f|
+    puts(f.read)
+end
+
 
 
 #----------------
