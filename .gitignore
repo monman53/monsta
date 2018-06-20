@@ -4,4 +4,6 @@
 !/README.adoc
 !/LICENSE
 !/src
+!/docker
+!/docker-compose.yml
 !.gitkeep

@@ -16,8 +16,6 @@ puts "<meta name='viewport' content='width=device-width, initial-scale=1'>"
 puts "<link rel='shortcut icon' type='image/png' href='/img/favicon.png'/>"
 puts "<title>#{document.doctitle} : monman53" + "</title>"
 
-# main css
-puts "<link rel='stylesheet' href='/css/main.css'>"
 # highlightjs
 puts "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css'>"
 puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js'></script>"
@@ -26,6 +24,8 @@ puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/language
 puts "<script>hljs.initHighlightingOnLoad();</script>"
 # MathJax
 puts "<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>"
+# main css
+puts "<link rel='stylesheet' href='/css/main.css'>"
 
 # title
 puts "<p><a href='/'>monman53.github.io</a></p>"
