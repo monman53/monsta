@@ -17,13 +17,16 @@ puts "<link rel='shortcut icon' type='image/png' href='/img/favicon.png'/>"
 puts "<title>#{document.doctitle} : monman53" + "</title>"
 
 # highlightjs
+#puts "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css'>"
 puts "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css'>"
 puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js'></script>"
 puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js'></script>"
 puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/tex.min.js'></script>"
+puts "<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/vim.min.js'></script>"
 puts "<script>hljs.initHighlightingOnLoad();</script>"
 # MathJax
 puts "<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>"
+puts "<script type='text/x-mathjax-config'>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>"
 # main css
 puts "<link rel='stylesheet' href='/css/main.css'>"
 
