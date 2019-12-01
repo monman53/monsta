@@ -18,7 +18,7 @@ $(rbs): %: %.rb
 htmls: $(OBJS)
 
 %.html: %.adoc ./convert
-	ruby ./convert $< > $(basename $<).html
+	ruby src/convert.rb $< > $(basename $<).html
 
 
 clean:

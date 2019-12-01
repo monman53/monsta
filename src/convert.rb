@@ -40,7 +40,7 @@ class ImageCellBlockMacro < Asciidoctor::Extensions::BlockMacroProcessor
     named :image_cell
 
     def process parent, target, attrs
-        exif = EXIFR::JPEG.new("root"+target+".jpg")
+        exif = EXIFR::JPEG.new("public"+target+".jpg")
         exif_text = "#{exif.focal_length.to_int}mm, F#{exif.f_number.to_f}, SS#{exif.exposure_time}, ISO#{exif.iso_speed_ratings}, #{exif.lens_model}, #{exif.model}"
         html = %(
             <div class="image-cell">
