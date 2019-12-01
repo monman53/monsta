@@ -1,10 +1,6 @@
-#--------------------------------
-# monman static site generator 
-#--------------------------------
-
 .PHONY:	htmls
 
-SRCS	= $(shell find root -name '*.adoc')
+SRCS	= $(shell find public -name '*.adoc')
 OBJS	= $(SRCS:.adoc=.html)
 
 VPATH	= src
@@ -26,5 +22,5 @@ htmls: $(OBJS)
 
 
 clean:
-	find ./root -name "*.html" -delete
+	find ./public -name "*.html" -delete
 	rm -f $(rbs)
