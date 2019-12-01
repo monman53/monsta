@@ -90,7 +90,7 @@ puts "<link rel='stylesheet' href='/css/main.css'>"
 puts "<header><div class='pad'>"
 # bread crumbs
 path = Pathname.new(filename)
-base = Pathname.new("./root")
+base = Pathname.new("./public")
 path = path.relative_path_from(base).sub_ext(".html")
 bread = "<a href='/'>monman53.github.io</a> / "
 path.descend do |v|
