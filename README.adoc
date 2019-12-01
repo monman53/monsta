@@ -1,19 +1,28 @@
-monsta
+MONman Super poor sTAtic site generator.
 ======
 
-MONman Super poor sTAtic site generator.
-
-個人用です．
+AsciiDoc based simple static site generator.
 
 == Requirements
 
 * GNU Make
 * Ruby
-** asciidoctor
+** bundler
+
+== Installation
+
+1. `bundle install`
 
 == Usage
 
-1. `mkdir root`
-2. put `*.adoc` into `root` directory.
-3. `make`
-4. `.html` will be generated for each `.adoc`.
+=== `.html` generation
+
+1. run `mkdir public`
+2. put `*.adoc` files into `public` directory.
+3. run `make`
+4. `.html` files will be generated for each `.adoc` files.
+
+=== Run Nginx server
+
+1. run `docker-compose up -d`
+2. access http://localhost:80/
