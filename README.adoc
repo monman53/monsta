@@ -1,5 +1,4 @@
-MONman Super poor sTAtic site generator.
-======
+= MONman Super poor sTAtic site generator.
 
 AsciiDoc based simple static site generator.
 
@@ -26,3 +25,10 @@ AsciiDoc based simple static site generator.
 
 1. run `docker-compose up -d`
 2. access http://localhost:80/
+
+=== Link checker
+
+The local web server must be running by `docker-compose up -d`.
+This function is only for local web server (the root is http://localhost:80/).
+
+1. run `make check`

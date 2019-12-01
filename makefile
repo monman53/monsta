@@ -6,20 +6,23 @@ OBJS	= $(SRCS:.adoc=.html)
 VPATH	= src
 
 
-rbs		= convert
+# rbs		= converter linkchecker
 
 all: $(shs) $(rbs) htmls 
 
 
-$(rbs): %: %.rb
-	cp $< $@
+# $(rbs): %: %.rb
+# 	cp $< $@
 
 
 htmls: $(OBJS)
 
-%.html: %.adoc ./convert
-	ruby src/convert.rb $< > $(basename $<).html
+%.html: %.adoc src/converter.rb
+	ruby src/converter.rb $< > $(basename $<).html
 
+
+check:
+	ruby src/linkchecker.rb
 
 clean:
 	find ./public -name "*.html" -delete
