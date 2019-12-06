@@ -4,15 +4,15 @@ def adoc2html(filename)
   #----------------
   # macros
   #----------------
-  require_relative './macros'
+  require_relative './src/macros'
 
   #================================
   # rendering html
   #================================
   document = Asciidoctor.load_file(filename)
 
-  require_relative './head'
-  require_relative './body'
+  require_relative './src/head'
+  require_relative './src/body'
 
   html  = "<!doctype html>"
   html += "<html lang='ja'>"

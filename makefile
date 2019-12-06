@@ -1,14 +1,14 @@
 all: timestamp htmls
 
 htmls:
-	ruby src/main.rb -m
+	ruby main.rb -m
 
 timestamp: src/* 
 	touch timestamp
 
 check:
-	ruby src/linkchecker.rb
+	ruby linkchecker.rb
 
 clean:
-	ruby src/main.rb -c
+	ruby main.rb -c
 	rm -f timestamp
