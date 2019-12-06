@@ -6,7 +6,7 @@ host = 'localhost'
 root = 'http://' + host
 
 # queue
-q = [{from: 'root', to: root + '/'}]
+q = [{from: 'tree-root', to: root + '/'}]
 s = Set.new()
 
 while !q.empty?
@@ -27,9 +27,10 @@ while !q.empty?
 
     # output status
     if res.code != '200'
-        puts "[\e[31;1m" + res.code + "\e[m] " + qc[:from] + " -> \e[31;1m" + qc[:to] + "\e[m"
+        puts "\n[\e[31;1m" + res.code + "\e[m] " + qc[:from] + " -> \e[31;1m" + qc[:to] + "\e[m"
     else
-        puts "[\e[32m" + res.code + "\e[m] " + qc[:from] + " -> " + qc[:to]
+        print '.'
+        # puts "[\e[32m" + res.code + "\e[m] " + qc[:from] + " -> " + qc[:to]
     end
     s.add(qc[:to])
 

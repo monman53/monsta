@@ -8,7 +8,7 @@ AsciiDoc based simple static site generator.
 * Ruby
 ** bundler
 
-== Installation
+== Setup
 
 1. `bundle install`
 
@@ -27,6 +27,8 @@ AsciiDoc based simple static site generator.
 2. access http://localhost:80/
 
 === Link checker
+
+You can find broken links in your website.
 
 The local web server must be running by `docker-compose up -d`.
 This function is only for local web server (the root is http://localhost:80/).

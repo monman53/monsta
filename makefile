@@ -1,29 +1,14 @@
-.PHONY:	htmls
+all: timestamp htmls
 
-SRCS	= $(shell find public -name '*.adoc')
-OBJS	= $(SRCS:.adoc=.html)
+htmls:
+	ruby src/main.rb -m
 
-VPATH	= src
-
-
-# rbs		= converter linkchecker
-
-all: $(shs) $(rbs) htmls 
-
-
-# $(rbs): %: %.rb
-# 	cp $< $@
-
-
-htmls: $(OBJS)
-
-%.html: %.adoc src/converter.rb
-	ruby src/converter.rb $< > $(basename $<).html
-
+timestamp: src/* 
+	touch timestamp
 
 check:
 	ruby src/linkchecker.rb
 
 clean:
-	find ./public -name "*.html" -delete
-	rm -f $(rbs)
+	ruby src/main.rb -c
+	rm -f timestamp
