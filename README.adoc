@@ -2,6 +2,7 @@
 
 AsciiDoc based simple static site generator.
 
+
 == Requirements
 
 * GNU Make
@@ -9,25 +10,38 @@ AsciiDoc based simple static site generator.
 * bundler
 * (docker-compose)
 
+
 == Setup
 
 [source, bash]
 ----
-$ bash install.sh
+$ bash setup.sh
 ----
+
 
 == Usage
 
 === `.html` generation
 
+Prepare `.adoc` files (or directories) on `public` directory. (`public` directory is created by `bash setup.sh`.)
+
 [source, bash]
 ----
-$ mkdir public
 $ echo hello > public/index.adoc
 $ make
 ----
 
-=== Start Nginx server
+Then, `.html` files will be exported into public directory.
+
+=== Edit templates and macros (Optional)
+
+You can edit 3 files on `src/`. Their default contents are copied from `src/*_example.rb`.
+
+* `src/head.rb`
+* `src/body.rb`
+* `src/macros.rb`
+
+=== Start Nginx server (Optional)
 
 [source, bash]
 ----
@@ -35,7 +49,7 @@ $ docker-compose up -d
 $ curl http://localhost/
 ----
 
-==== Link checker
+==== Link checker (Optional)
 
 You can find broken links in your website.
 
@@ -46,3 +60,7 @@ $ make check
 
 The local web server must be running by `docker-compose up -d`.
 This function is only for local web server (the root is http://localhost:80/).
+
+== Examples
+
+* https://monman53.github.io/
