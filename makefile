@@ -3,7 +3,7 @@ all: timestamp htmls
 htmls:
 	ruby main.rb -m
 
-timestamp: src/* 
+timestamp: src/* main.rb adoc2html.rb
 	touch timestamp
 
 check:

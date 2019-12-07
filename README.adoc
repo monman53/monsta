@@ -49,7 +49,7 @@ $ docker-compose up -d
 $ curl http://localhost/
 ----
 
-==== Link checker (Optional)
+=== Link checker (Optional)
 
 You can find broken links in your website.
 

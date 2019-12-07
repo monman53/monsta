@@ -4,7 +4,7 @@ require 'optparse'
 require_relative 'adoc2html'
 
 #----------------
-# convert .adoc to .html
+# parse options
 op = OptionParser.new
 opts = {
   make: false,

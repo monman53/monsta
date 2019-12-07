@@ -9,7 +9,7 @@ def adoc2html(filename)
   #================================
   # rendering html
   #================================
-  document = Asciidoctor.load_file(filename)
+  document = Asciidoctor.load_file(filename, safe: :safe)
 
   require_relative './src/head'
   require_relative './src/body'
