@@ -17,6 +17,12 @@ while !q.empty?
 
     # GET request
     uri = URI.parse(qc[:to])
+
+    # ignore footnote path TODO: use more better solution
+    if uri.path == ''
+      next
+    end
+
     f_ssl = true
     if uri.scheme == 'http'
         f_ssl = false
