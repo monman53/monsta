@@ -18,7 +18,7 @@ GEM
     minitest (5.13.0)
     net (0.3.3)
       activesupport
-    nokogiri (1.10.5)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
