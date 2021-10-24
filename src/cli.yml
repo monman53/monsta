@@ -1,0 +1,17 @@
+name: monsta
+version: "2.0.0"
+# author: Kevin K. <kbknapp@gmail.com>
+# about: Does awesome things
+args:
+    - src:
+        short: s
+        long: src
+        value_name: DIR
+        help: Source directory
+        takes_value: true
+    - dst:
+        short: d
+        long: dst
+        value_name: DIR
+        help: Destination directory
+        takes_value: true
